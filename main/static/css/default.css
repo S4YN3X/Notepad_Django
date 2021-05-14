@@ -64,6 +64,7 @@ body {
     display: inline-block;
 	float: left;
 }
+
 .text {
     background-image: url("Screenshot_1.png");
     position: relative;

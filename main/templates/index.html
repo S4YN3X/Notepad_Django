@@ -24,8 +24,8 @@
                 </li>
               {% else %}
                 <li class="nav-item">
-                    <a class="nav-link active back" aria-current="page" href="{% url 'login_page' %}">Звйди</a>
-                    <a class="nav-link active back" aria-current="page" href="{% url 'register_page' %}">рега</a>
+                    <a class="nav-link active back" aria-current="page" href="{% url 'login_page' %}">Авторизация</a>
+                    <a class="nav-link active back" aria-current="page" href="{% url 'register_page' %}">Регистрация</a>
                 </li>
               {% endif %}
           </div>
@@ -67,7 +67,7 @@
                 </table>
             </div>
         </div>
-
+{% csrf_token %}
 <form id="add_form" method="post">
     {% csrf_token %}
     <div class="mb-3">
