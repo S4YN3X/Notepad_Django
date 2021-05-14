@@ -49,15 +49,16 @@ body {
     color: #474d8b;
     color: #474d8b;
     padding: 5px 2px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;   
-    font-size: 16px;
-    cursor: pointer;
-    float: left;
-    left: 81%;
+    /* text-align: center; */
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    /* font-size: 16px; */
+    /* cursor: pointer; */
+    float: right;
+    /* left: 81%; */
+    /* right: 5%; */
     position: relative;
-    bottom: 17%;
+    bottom: 37%;
 }
 
 .content {
@@ -78,9 +79,10 @@ body {
 
 .List {
     display: inline-block;
-    margin-left: -21%;
-    position: relative;
+    /* margin-left: -140%; */
+    position: absolute;
     margin-top: 3%;
+    left: 20px;
 }
 #name {
     color: #474d8b;
@@ -92,7 +94,8 @@ body {
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-    width: 10vw;
+    width: auto;
+    min-width: 140px;
     display: block;
     margin-left: -19%;
 }
@@ -119,7 +122,7 @@ body {
 .nav-link {
     display: inline-block !important;
     padding: 0.5rem 1rem !important;
-    margin-top: 10% !important; 
+    margin-top: 10% !important;
 }
 
 a {
@@ -128,5 +131,17 @@ a {
 }
 
 .form-control{
-	width: 25% !important;
+	/* width: 25% !important; */
+}
+
+#add_form {
+    position: absolute;
+    left: 250px;
+    min-width: 500px;
+    width: 400px;
+}
+
+.note {
+    min-width: 240px;
+    max-width: 240px;
 }

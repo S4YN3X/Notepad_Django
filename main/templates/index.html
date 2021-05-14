@@ -10,13 +10,6 @@
 
 <div class="header">
 
-        <div class="input-group mb-3 New">
-            <img src="{% static 'img/logo.jpg' %}" id="logo">
-            <input type="text" class="form-contro border border-light" placeholder="Название заметки" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary border border-light" type="button" id="button-addon2">+</button>
-        </div>
-
-
           <div class="lgn_butt" role="group" aria-label="Basic example">
              {% if request.user.is_authenticated %}
                 <li class="nav-item">
@@ -38,28 +31,28 @@
                         <th id="name">Заметки</th>
                     </tr>
                     <tr class="tbl">
-                        <td>
+                        <td class="note">
                             <a href="#" class="list-group-item list-group-item-action active text-wrap " aria-current="true">
                                 Секретные заметки
                             </a>
                         </td>
                     </tr>
                     <tr class="tbl">
-                        <td>
+                        <td class="note">
                             <a href="#" class="list-group-item list-group-item-action active text-wrap">Список фильмов</a>
                         </td>
                     </tr>
                     <tr class="tbl">
-                        <td>
+                        <td class="note">
                             <a href="#" class="list-group-item list-group-item-action active text-wrap">Купить в магазине</a>
                         </td>
                     </tr>
                     <tr class="tbl">
-                        <td>
+                        <td class="note">
                             <a href="#" class="list-group-item list-group-item-action active text-wrap">Варианты подарка девушке</a>
                         </td>
                     <tr class="tbl">
-                        <td>
+                        <td class="note">
                             <a href="#" class="list-group-item list-group-item-action active text-wrap" >Долги</a>
                         </td>
                     </tr>
