@@ -9,7 +9,7 @@
 <body>
 
 <div class="header">
-          <a href="" id="edit">Создать заметку</a>
+          <a href="{% url 'create_page' %}" id="edit">Создать заметку</a>
           <div class="lgn_butt" role="group" aria-label="Basic example">
              {% if request.user.is_authenticated %}
                 <li class="nav-item">

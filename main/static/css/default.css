@@ -182,6 +182,40 @@ p {
     left: 17px;
 }
 
+#edit2 {
+
+    background-color: #474d8b;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+    top: 12px;
+    left: 17px;
+}
+
+#edit3 {
+    background-color: #474d8b;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+    top: 12px;
+    left: 152px;
+}
+
+
 .list-group-item.active {
     background-color: #474d8b !important;
     border-color: #474d8b !important;

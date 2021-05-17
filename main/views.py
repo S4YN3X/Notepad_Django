@@ -49,6 +49,23 @@ def detail_page(request, pk):
     return render(request, 'detail_page.html', context=context)
 
 
+@login_required(login_url='/login')
+def create_page(request):
+    form = NoteForm()
+    if request.method == 'POST':
+        form = NoteForm(request.POST)
+        if form.is_valid():
+            form_new = form.save(commit=False)
+            form_new.author = request.user
+            form_new.save()
+
+    context = {
+        'form': form,
+        'private_posts': Note.objects.filter(author=request.user)
+    }
+    return render(request, 'create_page.html', context=context)
+
+
 class BlLoginView(LoginView):
     template_name = 'login.html'
     form_class = AuthUserForm
