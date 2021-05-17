@@ -13,7 +13,7 @@ body {
 
 .login {
   position: relative;
-  left: 385%;
+  left: 772px;
 }
 
 body {
@@ -49,4 +49,14 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.btn {
+    background-color: #474d8b !important;
+    border: none !important;
+}
+
+.btn-primary {
+    color: white !important;
+
 }

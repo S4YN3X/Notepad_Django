@@ -6,13 +6,6 @@
     <link href="{% static 'css/login.css' %}" rel="stylesheet">
 </head>
 <body class="text-center">
-    <div class='header'>
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link active back" aria-current="page" href="/">Вернуться</a>
-        </li>
-      </ul>
-    </div>
 <form id="add_form" method="post">
     {% csrf_token %}
    <div class='login'>
@@ -26,7 +19,11 @@
             <label for="{{ form.password.id_for_label }}" class="form-label">Пароль</label>
             {{ form.password }}
           <br>
+      </div>
       <button type="submit" class="btn btn-primary">Продолжить</button>
+       <div>
+            Ещё нет аккаунта? <a href="#" class="link-primary">Зарегистрироваться сейчас</a>
+       </div>
   </div>
 </form>
 </body>

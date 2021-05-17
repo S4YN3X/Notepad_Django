@@ -9,11 +9,11 @@
 <body>
 
 <div class="header">
-
+          <a href="" id="edit">Создать заметку</a>
           <div class="lgn_butt" role="group" aria-label="Basic example">
              {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                     <a class="nav-link active back" aria-current="page" href="{% url 'logout_page' %}" id="tupoycss">Выйти</a>
+                     <a class="nav-link active back" aria-current="page" href="{% url 'logout_page' %}" id="stupid_css">Выйти</a>
                 </li>
               {% else %}
                 <li class="nav-item">

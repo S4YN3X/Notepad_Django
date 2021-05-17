@@ -58,7 +58,7 @@ body {
     /* left: 81%; */
     /* right: 5%; */
     position: relative;
-    bottom: 36%;
+    bottom: 118%;
 }
 
 .content {
@@ -88,6 +88,7 @@ body {
     color: #474d8b;
 }
 .tbl {
+    background-color: #474d8b;
     display: block;
     padding: 15px 32px;
     text-align: center;
@@ -115,8 +116,11 @@ body {
 }
 
 
-#stupid_css{
+#tupoycss{
 	margin-top: 25% !important;
+	background-color: #474d8b !important;
+    border-radius: 10px;
+    color: #474d8b;
 }
 
 .nav-link {
@@ -136,7 +140,8 @@ a {
 
 #add_form {
     position: absolute;
-    left: 250px;
+    left: 692px;
+    bottom: 286px;
     min-width: 500px;
     width: 400px;
 }
@@ -144,6 +149,19 @@ a {
 .note {
     min-width: 240px;
     max-width: 240px;
+}
+
+#edit {
+    background-color: #474d8b;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
 }
 
 .h1, h1 {
@@ -164,6 +182,9 @@ p {
     font-size:20px
 }
 
+#knopka{
+    color: black !important;
+}
 
 #edit {
 
@@ -177,18 +198,4 @@ p {
     font-size: 16px;
     cursor: pointer;
     float: left;
-    position: absolute;
-    top: 12px;
-    left: 17px;
-}
-
-.list-group-item.active {
-    background-color: #474d8b !important;
-    border-color: #474d8b !important;
-}
-
-.zagolovok {
-    text-align: center;
-    position: relative;
-    bottom: 30px;
 }
