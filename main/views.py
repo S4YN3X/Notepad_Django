@@ -11,14 +11,8 @@ from main.models.note import Note
 
 
 def index(request):
-    form = NoteForm(initial={'text': 'first_value'})
-    if request.method == 'POST':
-        form = NoteForm(request.POST)
-        if form.is_valid():
-            form.save()
-
     context = {
-        'form': form
+        'notes': Note.objects.all(),
     }
     return render(request, 'index.html', context)
 
@@ -50,3 +44,17 @@ class BlRegisterUserView(CreateView):
 
 class BlLogoutView(LogoutView):
     next_page = reverse_lazy('index')
+
+
+def edit_page(request):
+    form = NoteForm(initial={'text': 'first_value'})
+    if request.method == 'POST':
+        form = NoteForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'edit_page.html', context=context)

@@ -81,8 +81,8 @@ body {
     display: inline-block;
     /* margin-left: -140%; */
     position: absolute;
-    margin-top: 3%;
-    left: 20px;
+    margin-top: 20px;
+    left: 35px;
 }
 #name {
     color: #474d8b;
@@ -116,7 +116,7 @@ body {
 
 
 #tupoycss{
-	margin-top: 15% !important;
+	margin-top: 25% !important;
 }
 
 .nav-link {

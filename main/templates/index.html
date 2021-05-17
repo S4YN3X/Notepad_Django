@@ -30,56 +30,17 @@
                     <tr>
                         <th id="name">Заметки</th>
                     </tr>
+                    {% for note in notes %}
                     <tr class="tbl">
                         <td class="note">
-                            <a href="#" class="list-group-item list-group-item-action active text-wrap " aria-current="true">
-                                Секретные заметки
-                            </a>
+                            <a href="#" class="list-group-item list-group-item-action active text-wrap" >{{ note.name }}</a>
                         </td>
                     </tr>
-                    <tr class="tbl">
-                        <td class="note">
-                            <a href="#" class="list-group-item list-group-item-action active text-wrap">Список фильмов</a>
-                        </td>
-                    </tr>
-                    <tr class="tbl">
-                        <td class="note">
-                            <a href="#" class="list-group-item list-group-item-action active text-wrap">Купить в магазине</a>
-                        </td>
-                    </tr>
-                    <tr class="tbl">
-                        <td class="note">
-                            <a href="#" class="list-group-item list-group-item-action active text-wrap">Варианты подарка девушке</a>
-                        </td>
-                    <tr class="tbl">
-                        <td class="note">
-                            <a href="#" class="list-group-item list-group-item-action active text-wrap" >Долги</a>
-                        </td>
-                    </tr>
+                    {% endfor %}
                 </table>
                 </table>
             </div>
         </div>
-{% csrf_token %}
-<form id="add_form" method="post">
-    {% csrf_token %}
-    <div class="mb-3">
-            {{ form.name.errors }}
-            <label for="{{ form.name.id_for_label }}" class="form-label">Название заметки</label>
-            {{ form.name }}
-    </div>
-    <div class="mb-3">
-            {{ form.text.errors }}
-            <label for="{{ form.text.id_for_label }}" class="form-label">Текст</label>
-            {{ form.text }}
-    </div>
-    <div class="mb-3">
-            {{ form.author.errors }}
-            <label for="{{ form.author.id_for_label }}" class="form-label">Автор</label>
-            {{ form.author }}
-    </div>
-    <button form="add_form" type="submit" class="btn btn-primary mt-4">Продолжить</button>
-</form>
 
 
 </body>
