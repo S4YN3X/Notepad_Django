@@ -33,7 +33,7 @@
                     {% for posts in private_posts %}
                     <tr class="tbl">
                         <td class="note">
-                            <a href="{% url 'detail_page' posts.pk|stringformat:'s' %}" class="list-group-item list-group-item-action active text-wrap" >{{ posts.name|truncatechars:"24" }}</a>
+                            <a href="{% url 'detail_page' pk=posts.pk|stringformat:'s' %}" class="list-group-item list-group-item-action active text-wrap" >{{ posts.name|truncatechars:"24" }}</a>
                         </td>
                     </tr>
                     {% endfor %}

@@ -23,6 +23,6 @@ urlpatterns = [
     path('login/', BlLoginView.as_view(), name='login_page'),
     path('register/', BlRegisterUserView.as_view(), name='register_page'),
     path('logout', BlLogoutView.as_view(), name='logout_page'),
-    path('detail/<int:pk>', detail_page, name='detail_page'),
-    path('edit/<int:pk>', edit_page, name='edit_page')
+    path('detail/<pk>', detail_page, name='detail_page'),
+    path('edit/<pk>', edit_page, name='edit_page')
 ]

@@ -31,6 +31,7 @@ def edit_page(request, pk):
             form_new = form.save(commit=False)
             form_new.author = request.user
             form_new.save()
+
     context = {
         'form': form,
         'notes': Note.objects.get(pk=pk),
