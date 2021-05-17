@@ -38,7 +38,8 @@
     <div class="mb-3">
             {{ form.text.errors }}
             <label for="{{ form.text.id_for_label }}" class="form-label">Текст</label>
-            {{ form.text }}
+            {{ form.text | safe }}
+            {{ form.media }}
     </div>
     <button form="add_form" type="submit" class="btn btn-primary mt-4">Продолжить</button>
 </form>
