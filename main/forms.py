@@ -5,9 +5,11 @@ from main.models.note import Note
 
 
 class NoteForm(forms.ModelForm):
+    author = forms.CharField(required=False)
+
     class Meta:
         model = Note
-        fields = '__all__'
+        fields = ('name', 'text')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

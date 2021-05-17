@@ -145,3 +145,39 @@ a {
     min-width: 240px;
     max-width: 240px;
 }
+
+.h1, h1 {
+    font-size: calc(2.375rem + 1.5vw);
+}
+.h1, h1{
+    margin-top: -8px;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-left: 14%;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 22rem;
+    margin-left: 14%;
+    font-size:20px
+}
+
+#knopka{
+    color: black !important;
+}
+
+#edit {
+
+    background-color: #474d8b;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+}
