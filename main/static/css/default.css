@@ -226,3 +226,12 @@ p {
     position: relative;
     bottom: 30px;
 }
+
+.cked {
+    text-align: center;
+    /* word-break: break-all; */
+    position: absolute;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}

@@ -140,7 +140,7 @@ a {
 
 #add_form {
     position: absolute;
-    left: 692px;
+    left: 569px;
     bottom: 286px;
     min-width: 500px;
     width: 400px;
@@ -198,4 +198,13 @@ p {
     font-size: 16px;
     cursor: pointer;
     float: left;
+}
+
+h2 {
+    position: relative;
+    float: revert;
+    max-width: 700px;
+    min-width: 700px;
+    bottom: 269px;
+    left: 502px;
 }
