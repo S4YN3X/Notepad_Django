@@ -116,8 +116,8 @@ body {
 }
 
 
-#tupoycss{
-	margin-top: 25% !important;
+#stupid_css {
+	margin-top: 30% !important;
 	background-color: #474d8b !important;
     border-radius: 10px;
     color: #474d8b;
@@ -140,7 +140,7 @@ a {
 
 #add_form {
     position: absolute;
-    left: 185px;
+    left: 9%;
     /* bottom: 286px; */
     min-width: 550px;
     /* width: 500px; */
