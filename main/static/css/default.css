@@ -226,3 +226,27 @@ a {
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
 }
+
+@media screen and (min-width: 1400px) {
+    .header {
+    width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .header {
+    width: 110%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .header {
+        width: 124.3%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .header {
+        width: 125.4%;
+    }
+}
