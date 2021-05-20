@@ -10,18 +10,18 @@
 <div class='header'>
       <ul class="nav nav-pills">
         <li class="nav-item ">
-          <a class="nav-link back" aria-current="page" href="{% url 'detail_page' notes.pk %}">Вернуться</a>
+          <a class="nav-link back text-white" aria-current="page" href="{% url 'detail_page' notes.pk %}">Вернуться</a>
         </li>
       </ul>
           <div class="lgn_butt" role="group" aria-label="Basic example">
              {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                     <a class="nav-link active back" aria-current="page" href="{% url 'logout_page' %}" id="stupid_css">Выйти</a>
+                     <a class="nav-link active back text-white" aria-current="page" href="{% url 'logout_page' %}" id="stupid_css">Выйти</a>
                 </li>
               {% else %}
                 <li class="nav-item">
-                    <a class="nav-link active back" aria-current="page" href="{% url 'login_page' %}">Авторизация</a>
-                    <a class="nav-link active back" aria-current="page" href="{% url 'register_page' %}">Регистрация</a>
+                    <a class="nav-link active back text-white" aria-current="page" href="{% url 'login_page' %}">Авторизация</a>
+                    <a class="nav-link active back text-white" aria-current="page" href="{% url 'register_page' %}">Регистрация</a>
                 </li>
               {% endif %}
           </div>
