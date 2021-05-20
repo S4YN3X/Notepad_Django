@@ -13,9 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import url
 from django.contrib import admin
-from django.urls import path
-from main.views import index, BlLoginView, BlRegisterUserView, BlLogoutView, edit_page, detail_page, create_page
+from django.urls import path, include
+from main.views import index, BlLoginView, BlRegisterUserView, BlLogoutView, edit_page, detail_page, create_page, \
+    delete_page
 
 urlpatterns = [
     path('', index, name='index'),
@@ -26,4 +28,6 @@ urlpatterns = [
     path('detail/<pk>', detail_page, name='detail_page'),
     path('edit/<pk>', edit_page, name='edit_page'),
     path('create/', create_page, name='create_page'),
+    path('delete/<pk>', delete_page, name='delete_page'),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]

@@ -1,10 +1,9 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView, LogoutView
-from django.shortcuts import render
-from django.urls import reverse_lazy
+from django.shortcuts import render, redirect
+from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView
-from django.http import HttpResponseRedirect
 
 from main.forms import AuthUserForm, RegisterUserView, NoteForm
 from django.contrib.auth.models import User
@@ -51,6 +50,7 @@ def detail_page(request, pk):
 
 @login_required(login_url='/login')
 def create_page(request):
+    success = False
     form = NoteForm()
     if request.method == 'POST':
         form = NoteForm(request.POST)
@@ -58,12 +58,21 @@ def create_page(request):
             form_new = form.save(commit=False)
             form_new.author = request.user
             form_new.save()
+            success = True
 
     context = {
         'form': form,
-        'private_posts': Note.objects.filter(author=request.user)
+        'private_posts': Note.objects.filter(author=request.user),
+        'succes': success
     }
     return render(request, 'create_page.html', context=context)
+
+
+@login_required(login_url='/login')
+def delete_page(request, pk):
+    get_note = Note.objects.get(pk=pk)
+    get_note.delete()
+    return redirect(reverse('index'))
 
 
 class BlLoginView(LoginView):
@@ -93,7 +102,3 @@ class BlRegisterUserView(CreateView):
 
 class BlLogoutView(LogoutView):
     next_page = reverse_lazy('index')
-
-
-def some(request):
-    return HttpResponseRedirect('http://yandex.ru/')
