@@ -202,6 +202,21 @@ a {
     left: 152px;
 }
 
+#edit4 {
+    background-color: #474d8b;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+    top: 12px;
+    left: 275px;
+}
 
 .list-group-item.active {
     background-color: #474d8b !important;
